@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 68px 40px 35px 40px;
+    height: 100%;
+    box-sizing: border-box;
+
+    .body {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        .linkContainer {
+            perspective: 120px;
+            perspective-origin: bottom;
+
+            p {
+                text-decoration: none;
+                color: #1c1c1c;
+                font-size: 46px;
+            }
+    
+            p:hover {
+                font-style: italic;
+                cursor: pointer;
+            }
+        }       
+    }
+
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        
+        p{
+            width: 50%;
+            margin-top: 5px;
+            color: #1c1c1c;
+        }
+
+        p:hover{
+            font-style: italic;
+            cursor: pointer;
+        }
+    }
+}
