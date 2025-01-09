@@ -1,11 +1,12 @@
+import Layout from '@/components/layout'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
+    <Layout>
       <h1>Contact</h1>
       lorem ipsum dolor sit amet consectetur adipisicing
-    </div>
+    </Layout>
   )
 }
 

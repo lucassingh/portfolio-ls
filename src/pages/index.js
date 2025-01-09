@@ -1,3 +1,4 @@
+import Layout from "@/components/layout";
 import Loader from "../components/loader/loader";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
@@ -19,7 +20,9 @@ export default function Home() {
 			{!isLoaded ? (
 				<Loader onLoaded={handleLoaded} />
 			) : (
-				<Scene />
+				<Layout>
+					<Scene />
+				</Layout>
 			)}
 		</>
 	)
