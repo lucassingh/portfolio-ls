@@ -40,7 +40,7 @@ export default function Model() {
     return (
         <group ref={groupRef} scale={[0.5, 0.5, 0.5]}>
             <Text
-                font={'/fonts/PPNeueMontreal-Bold.otf'}
+                font={'/fonts/RozhaOne-Regular.ttf'}
                 position={[0, 0, -1]}
                 fontSize={0.6}
                 color="white"
