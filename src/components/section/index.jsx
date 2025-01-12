@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Section = ({ bgColor = 'yellow', children }) => {
+const Section = ({ bgColor = '#1c1c1c', children }) => {
     return (
         <div
             style={{ backgroundColor: bgColor }}

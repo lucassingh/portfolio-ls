@@ -1,0 +1,67 @@
+.paragraphWrapper {
+    position: relative;
+    overflow: hidden;
+
+    .paragraph {
+        display: flex;
+        font-size: 60px;
+        line-height: 1;
+        max-width: 1280px;
+        flex-wrap: wrap;
+
+        .word {
+            position: relative;
+            margin-right: 12px;
+            margin-top: 12px;
+
+            .shadow {
+                position: absolute;
+                opacity: 20%;
+            }
+        }
+    }
+}
+
+.paragraph2 {
+
+    display: flex;
+    font-size: 60px;
+    line-height: 1;
+    max-width: 1280px;
+    color: #c3c3c3;
+    flex-wrap: wrap;
+
+    .word2 {
+        position: relative;
+        margin-right: 12px;
+        margin-top: 12px;
+
+        .shadow2 {
+            position: absolute;
+            opacity: 20%;
+
+        }
+    }
+}
+
+.paragraph3 {
+
+    display: flex;
+    font-size: 60px;
+    line-height: 1;
+    max-width: 1280px;
+    color: #c3c3c3;
+    flex-wrap: wrap;
+
+    .word3 {
+
+        position: relative;
+        margin-right: 12px;
+        margin-top: 12px;
+
+        .shadow3 {
+            position: absolute;
+            opacity: 20%;
+        }
+    }
+}
