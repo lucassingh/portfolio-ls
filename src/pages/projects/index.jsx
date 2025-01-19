@@ -40,7 +40,6 @@ const Projects = () => {
 					{
 						projects.map((project, index) => {
 							return <Project index={index} title={project.title} setModal={setModal} key={index} />
-
 						})
 					}
 				</div>
