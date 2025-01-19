@@ -15,7 +15,7 @@ export default function Index() {
                     <directionalLight intensity={2} position={[0, 2, 3]} />
                     <Environment preset="city" />
                 </Canvas>
-                <div className="flex w-full h-screen items-center justify-center">
+                <div className="flex w-full h-screen items-center justify-center cursor-grabbing">
                     <Text />
                     <SceneReveal />
                 </div>
