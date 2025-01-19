@@ -2,7 +2,6 @@ import Layout from "@/components/layout";
 import Loader from "../components/loader/loader";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
-import Section from "@/components/section";
 
 const Scene = dynamic(() => import('../components/scene/Index'), {
 	ssr: false,
@@ -23,7 +22,7 @@ export default function Home() {
 			) : (
 				<>
 					<Layout>
-						<Scene />						
+						<Scene />
 					</Layout>
 				</>
 			)}

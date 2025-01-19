@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 6%;
+}
+
+.body {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
