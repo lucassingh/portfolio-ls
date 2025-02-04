@@ -27,7 +27,7 @@ const Paragraph2 = ({ paragraph }) => {
     return (
         <h2
             ref={container}
-            className={styles.paragraph2}
+            className={styles.paragraph2a}
         >
             {
                 words.map((word, i) => {

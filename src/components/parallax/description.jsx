@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Paragraph2 from '../paragraph/paragraph2';
+import Button from '../buttons/Button';
 
 export const Description = () => {
     return (
         <div className='flex justify-center my-40'>
-            <p className='text-[7.5vw] uppercase text-center max-w-[50vw] leading-none'>The quick brown fox jumps over the lazy dog</p>
+            <div className='w-[80%] md:w-[50%]'>
+                <Paragraph2 paragraph='I create all kinds of websites for any need.' />
+                <Button text='Download CV' />
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Description
+export default Description;
