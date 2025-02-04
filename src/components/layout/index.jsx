@@ -29,12 +29,12 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <motion.div className='w-full fixed h-screen flex flex-col top-0 left-0 pointer-events-none z-40'>
+            <motion.div className='w-full fixed flex flex-col top-0 left-0 pointer-events-none z-40'>
                 {
                     [...Array(numOffCols)].map((_, index) => {
                         return (
-                            <motion.div 
-                                key={index} 
+                            <motion.div
+                                key={index}
                                 variants={columnsExpandVariant}
                                 initial={'initial'}
                                 animate={'enter'}
