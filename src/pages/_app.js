@@ -9,12 +9,10 @@ export default function App({ Component, pageProps }) {
 	const router = useRouter();
 
 	return (
-		<>
-			<AnimatePresence mode='sync'>
-				<NavBar key="navbar" />
-				<Component {...pageProps} key={router.asPath} />
-				{/*<FooterComponent />*/}
-			</AnimatePresence>
-		</>
+		<AnimatePresence mode='sync'>
+			<NavBar key="navbar" />
+			<Component {...pageProps} key={router.asPath} />
+			<FooterComponent />
+		</AnimatePresence>
 	)
 }
