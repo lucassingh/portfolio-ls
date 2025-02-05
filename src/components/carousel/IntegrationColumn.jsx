@@ -1,12 +1,12 @@
 'use client'
 import Image from "next/image";
-import { twMerge } from "tailwind-merge";
 import { motion } from 'framer-motion';
 import { Fragment } from "react";
+import clsx from "clsx";
 
 const IntegrationsColumn = ({ integrations, className, reverse }) => {
     return (
-        <motion.div className={twMerge("flex flex-col gap-4 pb-4", className)}
+        <motion.div className={clsx("flex flex-col gap-4 pb-4", className)}
             initial={{ y: reverse ? '-50%' : 0 }}
             animate={{ y: reverse ? 0 : '-50%' }}
             transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}

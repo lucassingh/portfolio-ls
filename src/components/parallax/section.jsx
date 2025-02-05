@@ -12,6 +12,9 @@ export const Section = () => {
     });
     const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
+
+    //On this website, you can check out my projects, download my CV, view my work history, and see my academic milestones.'
+
     return (
         <div
             ref={container}
@@ -19,7 +22,7 @@ export const Section = () => {
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
             <div className='relative z-10 p-7 sm:p-20 mix-blend-difference text-white w-full h-auto flex flex-col justify-between'>
-                <Paragraph2 paragraph='On this website, you can check out my projects, download my CV, view my work history, and see my academic milestones.' />
+                <Paragraph2 paragraph='I am also a Systems Engineer, and I enjoy specializing in improving the user experience and developing web applications.' />
             </div>
             <div className='fixed top-[-50vh] left-0 h-[120vh] w-full'>
                 <motion.div style={{ y }} className='relative w-full h-full'>

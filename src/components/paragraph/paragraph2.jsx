@@ -10,7 +10,6 @@ const Word = ({ children, progress, range }) => {
         <span className={styles.shadow2}>{children}</span>
         <motion.span style={{ opacity: opacity }}>{children}</motion.span>
     </span>
-
 }
 
 const Paragraph2 = ({ paragraph }) => {

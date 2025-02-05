@@ -8,6 +8,8 @@ import Description from '@/components/parallax/description';
 import Slider from '@/components/slider';
 import Section from '@/components/parallax/section';
 import IntegrationsColumn from '@/components/carousel/IntegrationColumn';
+import Mask from "@/components/mask/Mask";
+import { SchoolGrid } from "@/components/education";
 
 const integrations = [
     { name: "React", icon: '/assets/icon-1.png' },
@@ -60,11 +62,11 @@ const About = () => {
             <Layout>
                 <section
                     ref={sectionRef}
-                    className="w-screen overflow-hidden bg-[#1c1c1c] py-10 text-center"
+                    className="w-screen overflow-hidden bg-[#1c1c1c] py-40 sm:py-20 text-center"
                 >
                     <h2 className="grid w-full gap-[3vw] font-black uppercase leading-[.7]">
                         <motion.div
-                            className="text-[27vw]"
+                            className="text-[28vw] mb-5 sm:mb-0"
                             initial={{ x: "-100%", opacity: 0 }}
                             animate={
                                 isVisible
@@ -79,11 +81,11 @@ const About = () => {
                                 delay: firstAnimationDone ? 0 : 2.7,
                             }}
                         >
-                            code
+                            Hi! I'm Lucas
                         </motion.div>
 
                         <motion.div
-                            className="grid gap-[3vw] text-[30vw] md:flex md:text-[11vw]"
+                            className="flex justify-center gap-[3vw] text-[18vw] md:flex md:text-[11vw]"
                             initial={{ x: "100%", opacity: 0 }}
                             animate={
                                 isVisible
@@ -98,13 +100,12 @@ const About = () => {
                                 delay: firstAnimationDone ? 0.3 : 3,
                             }}
                         >
-                            <span className="inline-block">that </span>
-                            <span className="inline-block max-md:text-[27vw]">makes </span>
-                            <span className="inline-block max-md:text-[40vw]">you </span>
+                            <span className="inline-block mb-5 sm:mb-0">front </span>
+                            <span className="inline-block max-md:text-[18vw]">end </span>
                         </motion.div>
 
                         <motion.div
-                            className="text-[32vw]"
+                            className="text-[17vw]"
                             initial={{ x: "-100%", opacity: 0 }}
                             animate={
                                 isVisible
@@ -119,7 +120,7 @@ const About = () => {
                                 delay: firstAnimationDone ? 0.5 : 3.2,
                             }}
                         >
-                            Smile
+                            developer
                         </motion.div>
                     </h2>
                 </section>
@@ -127,10 +128,10 @@ const About = () => {
                 <Description />
                 <Section />
                 <Slider />
-                <section className="sm:py-12 py-24 overflow-hidden">
+                <div className="py-12 sm:py-24 overflow-hidden">
                     <div className="container">
                         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
-                            <div className='mt-20'>
+                            <div className='mt-0 sm:mt-20'>
                                 <h2 className="text-5xl font-medium mt-6">
                                     Tech Stack & Tools I Use
                                 </h2>
@@ -153,9 +154,17 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div className="isMobile">
+                    <Mask />
+                </div>
+                <div className="title flex text-center justify-center">
+                    <h2 className="text-5xl font-medium mt-10 mb-0">
+                        Learning
+                    </h2>
+                </div>
+                <SchoolGrid />
             </Layout>
-
         </>
     )
 }

@@ -33,3 +33,21 @@ h6 {
 	font-weight: 700;
 	color: #c3c3c3;
 }
+
+.isMobile {
+	display: block;
+}
+
+.title {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.isMobile {
+		display: none;
+	}
+
+	.title {
+		display: block;
+	}
+}
