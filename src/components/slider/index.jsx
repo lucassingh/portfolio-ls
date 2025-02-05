@@ -6,6 +6,9 @@ import { projects } from './data';
 export const Slider = () => {
     return (
         <div className={styles.main}>
+            <div className={styles.contTitle}>
+                <h2 className='text-4xl sm:text-6xl'>Work Experience</h2>
+            </div>
             {
                 projects.map((project, i) => {
                     return <Card key={`p_${i}`} {...project} i={i} />
