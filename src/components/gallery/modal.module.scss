@@ -49,3 +49,14 @@
 .cursorLabel {
     background-color: transparent;
 }
+
+@media (max-width: 768px) {
+    .modalContainer {
+        display: none;
+    }
+
+    .cursor,
+    .cursorLabel {
+        display: none;
+    }
+}
