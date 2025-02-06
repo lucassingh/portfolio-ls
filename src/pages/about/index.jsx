@@ -34,7 +34,7 @@ const About = () => {
                 ([entry]) => {
                     setIsVisible(entry.isIntersecting);
                     if (entry.isIntersecting && !firstAnimationDone) {
-                        setTimeout(() => setFirstAnimationDone(true), 2700);
+                        setTimeout(() => setFirstAnimationDone(true), 2000);
                     }
                 },
                 { threshold: 0.2 }

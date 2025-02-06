@@ -16,6 +16,11 @@
 	font-style: normal;
 }
 
+html,
+body {
+	cursor: none;
+}
+
 body {
 	color: #c3c3c3;
 	background-color: #1c1c1c;
@@ -124,4 +129,12 @@ h6 {
 	.section-h {
 		padding: 8%;
 	}
+
+	.custom-cursor {
+		display: none;
+	}
+}
+
+.custom-cursor {
+	transition: transform 0.1s ease-out;
 }

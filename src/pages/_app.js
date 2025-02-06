@@ -1,3 +1,4 @@
+import CustomCursor from '@/components/cursor/customCursor';
 import FooterComponent from '@/components/footer/FooterComponent'
 import NavBar from '@/components/header'
 import '@/styles/globals.scss'
@@ -11,8 +12,9 @@ export default function App({ Component, pageProps }) {
 	return (
 		<AnimatePresence mode='sync'>
 			<NavBar key="navbar" />
+			<CustomCursor key="custom-cursor" />
 			<Component {...pageProps} key={router.asPath} />
-			<FooterComponent />
+			<FooterComponent key="footer" />
 		</AnimatePresence>
 	)
 }
