@@ -1,5 +1,5 @@
 .main {
-    height: 50vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,4 +9,17 @@
     width: 40vw;
     border-radius: 6px;
     background-color: none;
+}
+
+@media (max-width: 768px) {
+    .main {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .body {
+        width: 100%;
+    }
 }

@@ -16,19 +16,11 @@ export const links = [
 
 export const footerLinks = [
     {
-        title: "Facebook",
-        href: "/"
-    },
-    {
         title: "LinkedIn",
-        href: "/"
+        href: "https://www.linkedin.com/in/lucassingh/"
     },
     {
-        title: "Instagram",
-        rref: "/"
+        title: "Github",
+        href: "https://github.com/lucassingh"
     },
-    {
-        title: "Twitter",
-        href: "/"
-    }
 ]

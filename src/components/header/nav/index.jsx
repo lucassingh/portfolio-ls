@@ -43,7 +43,7 @@ export const index = () => {
                                 exit="exit"
                                 key={`f_${i}`}
                             >
-                                <a href={link.href}>
+                                <a href={link.href} target='blank'>
                                     {link.title}
                                 </a>
                             </motion.p>

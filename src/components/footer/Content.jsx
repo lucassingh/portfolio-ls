@@ -14,9 +14,9 @@ export default function Content() {
 
 const Section2 = () => {
     return (
-        <div className='flex justify-between items-end'>
-            <p className='text-[#1c1c1c] text-xs'>Lucas Singh - ©copyright - All rights reserved</p>
-            <h1 className='text-[7vw] text-[#1c1c1c] leading-[0.8] mt-10'>Stay Tuned!</h1>
+        <div className='flex sm:justify-between justify-center items-end'>
+            <h1 className='text-[12vw] sm:text-[5vw] text-[#1c1c1c] leading-[0.8] mt-10'>Stay Tuned!</h1>
+            <p className='no-copy text-[#1c1c1c] text-[2vw] sm:text-[0.7vw]'>Lucas Singh - ©copyright - All rights reserved</p>
         </div>
     )
 }

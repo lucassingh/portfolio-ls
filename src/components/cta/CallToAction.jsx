@@ -26,9 +26,8 @@ export default function CallToAction() {
         }
     }, [isHovered]);
 
-    // Función para redirigir a Google
     const handleClick = () => {
-        window.open('https://www.google.com', '_blank');
+        window.open('https://calendly.com/lucas-singh10/30min', '_blank');
     };
 
     return (
@@ -38,16 +37,16 @@ export default function CallToAction() {
                     className='button-cta'
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                    onClick={handleClick} // Agregamos el onClick
+                    onClick={handleClick}
                     style={{
-                        backgroundColor: isHovered ? '#1c1c1c' : 'transparent', // Cambia el fondo al hacer hover
-                        transition: 'background-color 0.3s ease', // Transición suave
-                        cursor: 'pointer', // Cambia el cursor a pointer
+                        backgroundColor: isHovered ? '#1c1c1c' : 'transparent',
+                        transition: 'background-color 0.3s ease',
+                        cursor: 'pointer',
                     }}
                 >
                     <div style={{ width: '100%', overflow: 'hidden' }}>
                         <motion.div
-                            className="flex flex-none gap-16 text-4xl pr-16 font-medium group"
+                            className="flex flex-none gap-16 sm:text-4xl text-3xl pr-16 font-medium group"
                             ref={scope}
                             style={{ width: 'max-content' }}
                         >
