@@ -94,6 +94,10 @@ h6 {
 	transition: background-color 0.3s ease;
 }
 
+.section-h {
+	padding: 6%;
+}
+
 @media (max-width: 768px) {
 	.button-cta {
 		width: 800px;
@@ -115,5 +119,9 @@ h6 {
 
 	.mob {
 		display: none;
+	}
+
+	.section-h {
+		padding: 8%;
 	}
 }

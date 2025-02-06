@@ -14,7 +14,7 @@ export default function CallToAction() {
             { x: "-50%" },
             { duration: 20, ease: 'linear', repeat: Infinity }
         );
-    }, []);
+    });
 
     useEffect(() => {
         if (animation.current) {
@@ -53,7 +53,7 @@ export default function CallToAction() {
                             {Array.from({ length: 20 }).map((_, i) => (
                                 <div key={i}>
                                     <span style={{ color: isHovered ? '#c3c3c3' : '#1c1c1c', transition: 'color 0.3s ease' }}>→</span>
-                                    <span style={{ color: isHovered ? '#c3c3c3' : '#1c1c1c', transition: 'color 0.3s ease' }}>Make a call</span>
+                                    <span style={{ color: isHovered ? '#c3c3c3' : '#1c1c1c', transition: 'color 0.3s ease' }}>Call me</span>
                                 </div>
                             ))}
                         </motion.div>
