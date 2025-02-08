@@ -1,0 +1,48 @@
+import React, { useState, useEffect } from 'react';
+import Wheater from './Wheater';
+
+export const Location = () => {
+
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(interval);
+    });
+
+    const formatTime = (date) => {
+        const hours = date.getHours().toString().padStart(2, '0');
+        const minutes = date.getMinutes().toString().padStart(2, '0');
+        const seconds = date.getSeconds().toString().padStart(2, '0');
+        return `${hours}:${minutes}:${seconds}`;
+    };
+
+    const getTimezone = (date) => {
+        const offset = -date.getTimezoneOffset() / 60;
+        return `GMT${offset >= 0 ? '+' : ''}${offset}`;
+    };
+
+    return (
+        <div className='w-full flex items-center flex-col p-8 rounded-lg border border-[#c3c3c3]'>
+            <h2 className='text-center text-5xl'>Available in</h2>
+            <div className='sm:w-3/4 w-full flex justify-between py-8'>
+                <span className='sm:text-6xl text-2xl'>Buenos Aires </span>
+                <span className='sm:text-6xl text-2xl'>Remotely</span>
+            </div>
+            <div className='flex flex-col sm:flex-row text-center items-center justfy-center py-8'>
+                <span className='text-7xl sm:text-[250px] font-black'>
+                    {formatTime(currentTime)}
+                </span>
+                <span className='text-2xl px-0 sm:px-6 '>{getTimezone(currentTime)}</span>
+            </div>
+            <div className='flex items-center justfy-center py-8'>
+                <Wheater />
+            </div>
+        </div>
+    )
+}
+
+export default Location

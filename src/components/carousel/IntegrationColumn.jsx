@@ -14,7 +14,7 @@ const IntegrationsColumn = ({ integrations, className, reverse }) => {
             {Array.from({ length: 2 }).map((_, i) => (
                 <Fragment key={i}>
                     {integrations.map(integration => (
-                        <div className="bg-neutral-900 border border-white/10 rounded-3xl p-6" key={integration.name}>
+                        <div className="border border-[#c3c3c3] rounded-3xl p-6" key={integration.name}>
                             <div className="flex justify-center">
                                 <Image className="size-24" width={150} height={150} src={integration.icon} alt={integration.name} />
                             </div>
