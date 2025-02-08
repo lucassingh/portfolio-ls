@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Wheater from './Wheater';
 
 export const Location = () => {
@@ -25,8 +27,12 @@ export const Location = () => {
         return `GMT${offset >= 0 ? '+' : ''}${offset}`;
     };
 
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+
     return (
-        <div className='w-full flex items-center flex-col p-8 rounded-lg border border-[#c3c3c3]'>
+        <motion.div ref={ref} animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }} className='w-full flex items-center flex-col p-8 rounded-lg border border-[#c3c3c3]'>
             <h2 className='text-center text-5xl'>Available in</h2>
             <div className='sm:w-3/4 w-full flex justify-between py-8'>
                 <span className='sm:text-6xl text-2xl'>Buenos Aires </span>
@@ -41,7 +47,7 @@ export const Location = () => {
             <div className='flex items-center justfy-center py-8'>
                 <Wheater />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
