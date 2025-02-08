@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Wheater from './Wheater';
+import CustomCursor2 from '../cursor/CustomCursor2';
 
 export const Location = () => {
+
+    const [isActive, setIsActive] = useState(false);
 
     const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -32,7 +35,12 @@ export const Location = () => {
     });
 
     return (
-        <motion.div ref={ref} animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }} className='w-full flex items-center flex-col p-8 rounded-lg border border-[#c3c3c3]'>
+        <motion.div
+            onMouseOver={() => { setIsActive(true) }}
+            onMouseLeave={() => { setIsActive(false) }}
+            ref={ref} animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+            className='w-full flex items-center flex-col p-8 rounded-lg border border-[#c3c3c3]'
+        >
             <h2 className='text-center text-5xl'>Available in</h2>
             <div className='sm:w-3/4 w-full flex justify-between py-8'>
                 <span className='sm:text-6xl text-2xl'>Buenos Aires </span>
@@ -47,6 +55,7 @@ export const Location = () => {
             <div className='flex items-center justfy-center py-8'>
                 <Wheater />
             </div>
+            <CustomCursor2 isActive={isActive} />
         </motion.div>
     )
 }

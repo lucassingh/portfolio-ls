@@ -5,7 +5,7 @@ const Wheater = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    {/*useEffect(() => {
+    useEffect(() => {
         const fetchWeather = async () => {
             const options = {
                 method: 'GET',
@@ -32,7 +32,7 @@ const Wheater = () => {
         };
 
         fetchWeather();
-    }, []);*/}
+    }, []);
 
     const getWeatherSymbol = (weatherCode) => {
         const iconPath = "/assets/wheater/";
@@ -61,11 +61,11 @@ const Wheater = () => {
             case 5001:
                 return <img src={`${iconPath}11-electric-storm.svg`} alt="Hight rain" />;
             default:
-                return <img src={`${iconPath}1-sunny.svg`} alt="Unknow" />;
+                return <img src={`${iconPath}12-unknow.svg`} alt="Unknow" />;
         }
     };
 
-    {/*if (loading) {
+    if (loading) {
         return <div>Loading...</div>;
     }
 
@@ -75,30 +75,21 @@ const Wheater = () => {
 
     if (!weatherData || !weatherData.data || !weatherData.data.values) {
         return <div>No data to show</div>;
-    }*/}
+    }
 
-    //const { temperature, humidity, weatherCode } = weatherData.data.values;
+    const { temperature, humidity, weatherCode } = weatherData.data.values;
 
     return (
         <>
             <div className='flex flex-col md:flex-row justify-center items-center gap-3 md:gap-5'>
-                <p className='text-xl md:text-3xl'>
-                    Temperature: <span className='font-bold text-xl md:text-3xl'>29°C</span>
-                </p>
-                <p className='text-xl md:text-3xl'>
-                    Humidity: <span className='font-bold text-xl md:text-3xl'>35%</span>
-                </p>
-                <img src={`/assets/wheater/1-sunny.svg`} width={40} alt="Sunny" />
-            </div>
-            {/*<div className='flex flex-col md:flex-row justify-center items-center gap-3 md:gap-5'>
                 <p className='text-xl md:text-3xl'>
                     Temperature: <span className='font-bold text-xl md:text-3xl'>{temperature}°C</span>
                 </p>
                 <p className='text-xl md:text-3xl'>
                     Humidity: <span className='font-bold text-xl md:text-3xl'>{humidity}%</span>
                 </p>
-                <p>{getWeatherSymbol(weatherCode)}</p>
-            </div>*/}
+                {getWeatherSymbol(weatherCode)}
+            </div>
         </>
     );
 };
