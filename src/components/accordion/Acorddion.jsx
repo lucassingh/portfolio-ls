@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const Acorddion = ({ title, text }) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
     const [isMobile, setIsMobile] = useState(false);
+
+    const [ref, inView] = useInView({
+        threshold: 0.5,
+    });
 
     useEffect(() => {
         const handleResize = () => {
@@ -24,7 +29,9 @@ export const Acorddion = ({ title, text }) => {
     return (
         <motion.div
             className="w-full cursor-pointer p-8 rounded-lg border border-[#c3c3c3] mb-8"
+            ref={ref}
             onClick={toggleAccordion}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             style={{
                 backgroundColor: isOpen ? "#c3c3c3" : "#1c1c1c",
                 color: isOpen ? "#1c1c1c" : "#c3c3c3",

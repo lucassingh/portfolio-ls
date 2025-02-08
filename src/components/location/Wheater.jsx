@@ -90,11 +90,14 @@ const Wheater = () => {
                 </p>
                 <img src={`/assets/wheater/1-sunny.svg`} width={40} alt="Sunny" />
             </div>
-            {/*<div>
-                <h1>Buenos Aires Weather {weatherData.location.name}</h1>
-                <p>Temperatura: {temperature}°C</p>
-                <p>Humedad: {humidity}%</p>
-                <p>Estado del tiempo: {getWeatherSymbol(weatherCode)}</p>
+            {/*<div className='flex flex-col md:flex-row justify-center items-center gap-3 md:gap-5'>
+                <p className='text-xl md:text-3xl'>
+                    Temperature: <span className='font-bold text-xl md:text-3xl'>{temperature}°C</span>
+                </p>
+                <p className='text-xl md:text-3xl'>
+                    Humidity: <span className='font-bold text-xl md:text-3xl'>{humidity}%</span>
+                </p>
+                <p>{getWeatherSymbol(weatherCode)}</p>
             </div>*/}
         </>
     );

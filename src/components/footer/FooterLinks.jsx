@@ -1,13 +1,20 @@
 import styles from './style.module.scss';
 import { TextDipserse } from './TextDisperse';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FooterLinks = () => {
+
     const openLinkInNewTab = (url) => {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
 
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+
     return (
-        <div className={styles.main}>
+        <motion.div className={styles.main} ref={ref} animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}>
             <div className={styles.body}>
                 <div className='introLine'>
                     <p>Lucas Singh</p>
@@ -37,7 +44,7 @@ const FooterLinks = () => {
                     <p>→lucas.singh10@gmail.com</p>
                 </TextDipserse>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
