@@ -22,10 +22,11 @@ const Wheater = () => {
                 }
 
                 const data = await response.json();
+                console.log('dataaaaaa', data);
                 setWeatherData(data);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
-                setError(error.message || 'Error to load data');
+                setError(error.message || 'Error loading data');
             } finally {
                 setLoading(false);
             }
@@ -36,33 +37,21 @@ const Wheater = () => {
 
     const getWeatherSymbol = (weatherCode) => {
         const iconPath = "/assets/wheater/";
+        const weatherMap = {
+            1000: { icon: `${iconPath}1-sunny.svg`, text: "Sunny" },
+            1100: { icon: `${iconPath}2-part-cloudy.svg`, text: "Partly Cloudy" },
+            1101: { icon: `${iconPath}3-mst-cloudy.svg`, text: "Mostly Cloudy" },
+            1102: { icon: `${iconPath}4-cloudy.svg`, text: "Cloudy" },
+            1001: { icon: `${iconPath}5-rainy.svg`, text: "Rain" },
+            2000: { icon: `${iconPath}6-foggy.svg`, text: "Fog" },
+            2100: { icon: `${iconPath}7-full-rainy.svg`, text: "Light Rain" },
+            4000: { icon: `${iconPath}8-snowy.svg`, text: "Snow" },
+            4001: { icon: `${iconPath}9-snowfall.svg`, text: "Snowfall" },
+            5000: { icon: `${iconPath}10-extreme-rain.svg`, text: "Moderate Rain" },
+            5001: { icon: `${iconPath}11-electric-storm.svg`, text: "Heavy Rain" },
+        };
 
-        switch (weatherCode) {
-            case 1000:
-                return <img src={`${iconPath}1-sunny.svg`} alt="Sunny" />;
-            case 1100:
-                return <img src={`${iconPath}2-part-cloudy.svg`} alt="Part cloudy" />;
-            case 1101:
-                return <img src={`${iconPath}3-mst-cloudy.svg`} alt="Mostly cloudy" />;
-            case 1102:
-                return <img src={`${iconPath}4-cloudy.svg`} alt="Cloudy" />;
-            case 1001:
-                return <img src={`${iconPath}5-rainy.svg`} alt="Rain" />;
-            case 2000:
-                return <img src={`${iconPath}6-foggy.svg`} alt="Fog" />;
-            case 2100:
-                return <img src={`${iconPath}7-full-rainy.svg`} alt="Light rain" />;
-            case 4000:
-                return <img src={`${iconPath}8-snowy.svg`} alt="Snow" />;
-            case 4001:
-                return <img src={`${iconPath}9-snowfall.svg`} alt="Snowfall" />;
-            case 5000:
-                return <img src={`${iconPath}10-extreme-rain.svg`} alt="Moderate rain" />;
-            case 5001:
-                return <img src={`${iconPath}11-electric-storm.svg`} alt="Hight rain" />;
-            default:
-                return <img src={`${iconPath}12-unknow.svg`} alt="Unknow" />;
-        }
+        return weatherMap[weatherCode] || { icon: `${iconPath}12-unknow.svg`, text: "Unknown" };
     };
 
     if (loading) {
@@ -78,19 +67,21 @@ const Wheater = () => {
     }
 
     const { temperature, humidity, weatherCode } = weatherData.data.values;
+    const weatherInfo = getWeatherSymbol(weatherCode);
 
     return (
-        <>
-            <div className='flex flex-col md:flex-row justify-center items-center gap-3 md:gap-5'>
-                <p className='text-xl md:text-3xl'>
-                    Temperature: <span className='font-bold text-xl md:text-3xl'>{temperature}°C</span>
-                </p>
-                <p className='text-xl md:text-3xl'>
-                    Humidity: <span className='font-bold text-xl md:text-3xl'>{humidity}%</span>
-                </p>
-                {getWeatherSymbol(weatherCode)}
-            </div>
-        </>
+        <div className='flex flex-col md:flex-row justify-center items-center gap-3 md:gap-5'>
+            <p className='text-xl md:text-3xl'>
+                Temperature: <span className='font-bold text-xl md:text-3xl'>{temperature}°C</span>
+            </p>
+            <p className='text-xl md:text-3xl'>
+                Humidity: <span className='font-bold text-xl md:text-3xl'>{humidity}%</span>
+            </p>
+            <p className='flex justify-center text-xl md:text-3xl'>
+                <img className='px-2' src={weatherInfo.icon} alt={weatherInfo.text} />
+                <span className='text-xl md:text-3xl'>{weatherInfo.text}</span>
+            </p>
+        </div>
     );
 };
 

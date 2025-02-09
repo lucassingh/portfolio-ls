@@ -67,12 +67,12 @@ export default function Index() {
                     ))
                 }
             </div>
+            <div className="section-h h-screen flex flex-col w-full items-center justify-center">
+                <Location />
+            </div>
             <div className="w-full overflow-hidden py-32">
                 <WordsMarquee words={words} />
                 <WordsMarquee words={words} reverse />
-            </div>
-            <div className="section-h h-screen flex flex-col w-full items-center justify-center">
-                <Location />
             </div>
         </>
     );

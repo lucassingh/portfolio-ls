@@ -18,7 +18,7 @@ const Paragraph2 = ({ paragraph }) => {
 
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ["start 0.9", "start 0.25"]
+        offset: ["start 0.5", "start 0.09"]
     })
 
     const words = paragraph.split(" ")
