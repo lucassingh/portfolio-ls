@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Background from '../../../public/assets/1.jpg';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 import Paragraph2 from '../paragraph/paragraph2';
@@ -12,9 +11,6 @@ export const Section = () => {
     });
     const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
-
-    //On this website, you can check out my projects, download my CV, view my work history, and see my academic milestones.'
-
     return (
         <div
             ref={container}
@@ -26,7 +22,7 @@ export const Section = () => {
             </div>
             <div className='fixed top-[-50vh] left-0 h-[120vh] w-full'>
                 <motion.div style={{ y }} className='relative w-full h-full'>
-                    <Image src={Background} fill alt="image" style={{ objectFit: "cover" }} />
+                    <Image src='/assets/backgrounds/1.jpg' fill alt="image" style={{ objectFit: "cover" }} />
                 </motion.div>
             </div>
         </div>

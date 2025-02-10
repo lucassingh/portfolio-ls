@@ -12,14 +12,14 @@ import Mask from "@/components/mask/Mask";
 import { SchoolGrid } from "@/components/education";
 
 const integrations = [
-    { name: "React", icon: '/assets/icon-1.png' },
-    { name: "Next JS", icon: '/assets/icon-2.png' },
-    { name: "Typescript", icon: '/assets/icon-3.png' },
-    { name: "GitHub", icon: '/assets/icon-4.png' },
-    { name: "Figma", icon: '/assets/icon-5.png' },
-    { name: "Material UI", icon: '/assets/icon-6.png' },
-    { name: "Jira", icon: '/assets/icon-7.png' },
-    { name: "Sass", icon: '/assets/icon-8.png' }
+    { name: "React", icon: '/assets/icons/icon-1.png' },
+    { name: "Next JS", icon: '/assets/icons/icon-2.png' },
+    { name: "Typescript", icon: '/assets/icons/icon-3.png' },
+    { name: "GitHub", icon: '/assets/icons/icon-4.png' },
+    { name: "Figma", icon: '/assets/icons/icon-5.png' },
+    { name: "Material UI", icon: '/assets/icons/icon-6.png' },
+    { name: "Jira", icon: '/assets/icons/icon-7.png' },
+    { name: "Sass", icon: '/assets/icons/icon-8.png' }
 ];
 
 const About = () => {

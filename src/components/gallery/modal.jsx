@@ -53,7 +53,7 @@ export const Modal = ({ modal, projects, onClick }) => {
                             const { src, color } = project
                             return <div className={styles.modal} style={{ backgroundColor: color }} key={`modal_${index}`}>
                                 <Image
-                                    src={`/assets/${src}`}
+                                    src={`/assets/projects/${src}`}
                                     width={300}
                                     height={0}
                                     alt="image"

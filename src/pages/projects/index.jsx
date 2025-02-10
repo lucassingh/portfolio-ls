@@ -19,6 +19,19 @@ const projects = [
 		link: 'https://sembrandovalores.net/'
 	},
 	{
+		title: "Why Cruise Disney",
+		src: "img-9.png",
+		color: "#706D63",
+		link: 'https://disneycruise.disney.go.com/why-cruise-disney/'
+	},
+	{
+
+		title: "Rentas Córdoba",
+		src: "img-10.png",
+		color: "#8C8C8c",
+		link: 'https://www.rentascordoba.gob.ar/inicio/'
+	},
+	{
 		title: "Fizzi Soda",
 		src: "img-3.png",
 		color: "#EFE8D3",
@@ -40,7 +53,7 @@ const projects = [
 	{
 		title: "Suburbia Skate Shop",
 		src: "img-6.png",
-		color: "#706D63",
+		color: "#000000",
 		link: 'https://suburbia-landing-6d17.vercel.app/'
 	},
 	{

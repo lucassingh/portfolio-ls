@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Background from '../../../public/assets/2.jpg';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -16,7 +15,7 @@ export const Intro = () => {
     return (
         <div className='h-screen overflow-hidden'>
             <motion.div style={{ y }} className='relative h-full'>
-                <Image src={Background} fill alt="image" style={{ objectFit: "cover" }} />
+                <Image src='/assets/backgrounds/2.jpg' fill alt="image" style={{ objectFit: "cover" }} />
             </motion.div>
         </div>
     );

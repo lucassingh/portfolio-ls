@@ -27,7 +27,7 @@ export const School = ({ school }) => {
         <motion.div ref={ref} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} onClick={handleClick} onMouseEnter={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }} className={styles.project}>
             <p>{title1}</p>
             <motion.div variants={anim} animate={isActive ? "open" : "closed"} className={styles.imgContainer}>
-                <img src={`/assets/${src}`}></img>
+                <img src={`/assets/education/${src}`}></img>
             </motion.div>
             <p>{title2}</p>
         </motion.div>
