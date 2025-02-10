@@ -1,8 +1,29 @@
 import Layout from '@/components/layout';
+import { useRouter } from 'next/router';
+import Loader from '@/components/loader/loader';
+import { useEffect, useState } from 'react';
 
 const ProjectDetail = ({ project }) => {
+
+    const [loading, setLoading] = useState(true);
+
+    const router = useRouter();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return (
+            <Loader />
+        );
+    }
+
     if (!project) {
-        return <Layout><h1>Proyecto no encontrado</h1></Layout>;
+        return <Layout><h1>Can Not find a project</h1></Layout>;
     }
 
     return (
