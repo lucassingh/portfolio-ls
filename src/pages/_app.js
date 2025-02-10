@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
 	const router = useRouter();
 
 	return (
-		<AnimatePresence mode='sync'>
+		<AnimatePresence mode='await'>
 			<NavBar key="navbar" />
 			<CustomCursor key="custom-cursor" />
 			<Component {...pageProps} key={router.asPath} />

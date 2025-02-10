@@ -14,7 +14,7 @@ const Wheater = () => {
 
             try {
                 const response = await fetch(
-                    'https://api.tomorrow.io/v4/weather/realtime?location=Buenos%20Aires&apikey=zZFz1fphI4mYzCWvWRjlwJ9WjoSwAQPc',
+                    `https://api.tomorrow.io/v4/weather/realtime?location=Buenos%20Aires&apikey=${process.env.NEXT_PUBLIC_API_KEY_WHEATER}`,
                     options
                 );
                 if (response.status === 429) {
