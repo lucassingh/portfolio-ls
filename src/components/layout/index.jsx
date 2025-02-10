@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 
-const Layout = ({ children }) => {
-
+const Layout = ({ children, key }) => {
     const numOffCols = 6;
 
     const columnsExpandVariant = {
@@ -14,7 +13,7 @@ const Layout = ({ children }) => {
             transition: {
                 duration: 0.2,
                 delay: 0.2 * i,
-                ese: "easeIn"
+                ease: "easeIn"
             },
         }),
         exit: (i) => ({
@@ -22,7 +21,7 @@ const Layout = ({ children }) => {
             transition: {
                 duration: 0.3,
                 delay: 0.2 * i,
-                ese: "easeIn"
+                ease: "easeIn"
             },
         })
     }
@@ -33,8 +32,8 @@ const Layout = ({ children }) => {
                 {
                     [...Array(numOffCols)].map((_, index) => {
                         return (
-                            <motion.div 
-                                key={index} 
+                            <motion.div
+                                key={index}
                                 variants={columnsExpandVariant}
                                 initial={'initial'}
                                 animate={'enter'}
@@ -48,7 +47,7 @@ const Layout = ({ children }) => {
             </motion.div>
             {children}
         </div>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;
