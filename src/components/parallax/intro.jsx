@@ -15,7 +15,7 @@ export const Intro = () => {
     return (
         <div className='h-screen overflow-hidden'>
             <motion.div style={{ y }} className='relative h-full'>
-                <Image src='/assets/backgrounds/2.jpg' fill alt="image" style={{ objectFit: "cover" }} />
+                <Image src='/assets/backgrounds/2.jpg' priority fill alt="image" style={{ objectFit: "cover" }} />
             </motion.div>
         </div>
     );

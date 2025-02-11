@@ -1,13 +1,35 @@
 import Layout from '@/components/layout';
-import { useRouter } from 'next/router';
 import Loader from '@/components/loader/loader';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { ReactLenis } from '@studio-freight/react-lenis';
+import styles from './cardPro.module.scss';
+
+const CardProjectID = ({ title, subtitle, text1, bgColor }) => {
+
+    return (
+        <div className={styles.card}>
+            <div className={styles.cardInner} style={{ backgroundColor: bgColor }}>
+                <div className={styles.cardContent}>
+                    <h2 className={styles.title}>{title}</h2>
+                    <div className={styles.content}>
+                        <div className={styles.col1}>
+                            <span className={styles.subtitle}>{subtitle}</span><br /><br />
+                        </div>
+                        <div className={styles.col2}>
+                            <span className={styles.text}>{text1}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const ProjectDetail = ({ project }) => {
-
     const [loading, setLoading] = useState(true);
-
-    const router = useRouter();
+    const [scrollY, setScrollY] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -16,32 +38,67 @@ const ProjectDetail = ({ project }) => {
         return () => clearTimeout(timer);
     }, []);
 
-    if (loading) {
-        return (
-            <Loader />
-        );
-    }
+    useEffect(() => {
+        const handleScroll = () => setScrollY(window.scrollY);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        const checkScreenSize = () => setIsMobile(window.innerWidth < 768);
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
+    if (loading) return <Loader />;
 
     if (!project) {
-        return <Layout><h1>Can Not find a project</h1></Layout>;
+        return (
+            <Layout>
+                <h1>No se encontró el proyecto</h1>
+            </Layout>
+        );
     }
 
     return (
         <Layout>
-            <div style={{ padding: '20px', background: '#1c1c1c', minHeight: '100vh', textAlign: 'center' }}>
-                <h1 style={{ color: '#fff' }}>{project.title}</h1>
-                <img
-                    src={`/assets/projects/${project.src}`}
-                    alt={project.title}
-                    width="400"
-                    style={{ borderRadius: '10px' }}
-                />
-                <p style={{ color: '#fff', marginTop: '10px' }}>Diseño y Desarrollo</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer"
-                    style={{ display: 'inline-block', marginTop: '15px', padding: '10px 20px', background: '#fff', color: '#000', textDecoration: 'none', borderRadius: '5px' }}>
-                    Ver proyecto
-                </a>
-            </div>
+            <ReactLenis root>
+                <div className="relative w-full flex flex-col justify-center">
+                    <h1 className="text-6xl md:text-9xl font-bold px-5 md:px-10 absolute top-20 transform -translate-y-1/2">
+                        {project.title}
+                    </h1>
+
+                    <div className="w-full px-5 md:px-10 h-1/2">
+                        <div
+                            className="w-full h-auto pt-40 sm:pt-52 sm:h-auto overflow-hidden rounded-t-2xl"
+                            style={{
+                                transform: `translateY(${scrollY * 0.2}px)`,
+                            }}
+                        >
+                            <Image
+                                src={isMobile ? `/assets/projects/mobile/${project.srcMobile}` : `/assets/projects/${project.src}`}
+                                alt={project.title}
+                                width={1920}
+                                height={800}
+                                priority
+                                className="w-full h-full object-cover rounded-t-[20px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="relative h-auto w-full flex flex-col justify-center">
+                    {project.cards.map((card, i) => (
+                        <CardProjectID
+                            key={i}
+                            title={card.title}
+                            subtitle={card.subtitle}
+                            text1={card.text1}
+                            bgColor={card.bgColor}
+                        />
+                    ))}
+                </div>
+            </ReactLenis>
         </Layout>
     );
 };
@@ -51,24 +108,19 @@ export async function getStaticPaths() {
     const projects = await res.json();
 
     const paths = projects.map((project) => ({
-        params: { id: project.id },
+        params: { id: project.id.toString() },
     }));
 
-    return {
-        paths,
-        fallback: false,
-    };
+    return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
     const projects = await res.json();
-    const project = projects.find((p) => p.id === params.id);
+    const project = projects.find((p) => p.id.toString() === params.id);
 
     return {
-        props: {
-            project,
-        },
+        props: { project },
     };
 }
 
