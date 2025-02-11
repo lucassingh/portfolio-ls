@@ -1,0 +1,112 @@
+.card {
+    position: relative;
+    border: none;
+}
+
+.cardInner {
+    position: relative;
+    will-change: transform;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    gap: 4em;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.content {
+    display: flex;
+    margin-top: 35px;
+    gap: 3em;
+    align-items: center;
+    justify-content: start;
+}
+
+.col1 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.col2 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.cardImg {
+    flex-basis: 25%;
+    max-width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    flex: 1;
+    aspect-ratio: 16/9;
+    border-radius: 0.75em;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 7rem;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 2, 5rem;
+    color: #1c1c1c;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #1c1c1c;
+}
+
+.text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #1c1c1c;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 1em;
+    }
+
+    .cardImg {
+        display: none;
+    }
+
+    .col1 {
+        flex-basis: 20%;
+        /* 20% del ancho total */
+        max-width: 100%;
+    }
+
+    .col2 {
+        flex-basis: 20%;
+        /* 30% del ancho total */
+        max-width: 100%;
+    }
+}

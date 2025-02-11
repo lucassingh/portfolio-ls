@@ -22,7 +22,7 @@ export const Section = () => {
             </div>
             <div className='fixed top-[-50vh] left-0 h-[120vh] w-full'>
                 <motion.div style={{ y }} className='relative w-full h-full'>
-                    <Image src='/assets/backgrounds/1.jpg' fill alt="image" style={{ objectFit: "cover" }} />
+                    <Image src='/assets/backgrounds/1.jpg' priority fill alt="image" style={{ objectFit: "cover" }} />
                 </motion.div>
             </div>
         </div>
