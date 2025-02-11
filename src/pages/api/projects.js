@@ -82,7 +82,44 @@ const projects = [
         src: "img-4.png",
         srcMobile: 'img-4.png',
         color: "#000000",
-        link: "https://game-landing-lilac.vercel.app/"
+        link: "https://game-landing-lilac.vercel.app/",
+        cards: [
+            {
+                id: 1,
+                title: 'About Project',
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                bgColor: '#fbc1d4'
+            },
+            {
+                id: 2,
+                title: 'Technologies Used',
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+                text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                bgColor: '#c3abff'
+            },
+            {
+                id: 3,
+                title: 'Challenge and Solutions',
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+                text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                bgColor: '#FAFAFA'
+            },
+            {
+                id: 4,
+                title: 'Key Features',
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+                text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                bgColor: '#fed35b'
+            },
+            {
+                id: 5,
+                title: 'Visit Project',
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+                text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                bgColor: '#95deff'
+            },
+        ]
     },
     {
         id: "iphone-landing",

@@ -3,28 +3,8 @@ import Loader from '@/components/loader/loader';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { ReactLenis } from '@studio-freight/react-lenis';
-import styles from './cardPro.module.scss';
-
-const CardProjectID = ({ title, subtitle, text1, bgColor }) => {
-
-    return (
-        <div className={styles.card}>
-            <div className={styles.cardInner} style={{ backgroundColor: bgColor }}>
-                <div className={styles.cardContent}>
-                    <h2 className={styles.title}>{title}</h2>
-                    <div className={styles.content}>
-                        <div className={styles.col1}>
-                            <span className={styles.subtitle}>{subtitle}</span><br /><br />
-                        </div>
-                        <div className={styles.col2}>
-                            <span className={styles.text}>{text1}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
+import { CardProjectID } from '@/components/projectSlider/CardProjectID';
+import { motion } from 'framer-motion';
 
 const ProjectDetail = ({ project }) => {
     const [loading, setLoading] = useState(true);
@@ -56,7 +36,7 @@ const ProjectDetail = ({ project }) => {
     if (!project) {
         return (
             <Layout>
-                <h1>No se encontró el proyecto</h1>
+                <h1>Project Not Found</h1>
             </Layout>
         );
     }
@@ -65,15 +45,29 @@ const ProjectDetail = ({ project }) => {
         <Layout>
             <ReactLenis root>
                 <div className="relative w-full flex flex-col justify-center">
-                    <h1 className="text-6xl md:text-9xl font-bold px-5 md:px-10 absolute top-20 transform -translate-y-1/2">
+                    <motion.h1 className="text-6xl md:text-9xl font-bold px-5 md:px-10 absolute top-20 transform -translate-y-1/2"
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            delay: 3,
+                            type: 'spring',
+                            stiffness: 50,
+                            damping: 25,
+                        }}
+                    >
                         {project.title}
-                    </h1>
-
+                    </motion.h1>
                     <div className="w-full px-5 md:px-10 h-1/2">
-                        <div
+                        <motion.div
                             className="w-full h-auto pt-40 sm:pt-52 sm:h-auto overflow-hidden rounded-t-2xl"
                             style={{
                                 transform: `translateY(${scrollY * 0.2}px)`,
+                            }}
+                            initial={{ scale: 1.2, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{
+                                duration: 3,
+                                ease: 'easeInOut',
                             }}
                         >
                             <Image
@@ -84,13 +78,14 @@ const ProjectDetail = ({ project }) => {
                                 priority
                                 className="w-full h-full object-cover rounded-t-[20px]"
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-                <div className="relative h-auto w-full flex flex-col justify-center">
-                    {project.cards.map((card, i) => (
+                <div className='w-full h-auto pb-0'>
+                    {project.cards.map((card, index) => (
                         <CardProjectID
-                            key={i}
+                            key={index}
+                            i={index}
                             title={card.title}
                             subtitle={card.subtitle}
                             text1={card.text1}
