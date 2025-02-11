@@ -1,0 +1,245 @@
+[33mcommit d8fce6f1cff710f0c26f740d270090cef6bf53f5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mprueba-img[m[33m, [m[1;31morigin/prueba-img[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Tue Feb 11 02:39:02 2025 -0300
+
+    cambios
+
+[33mcommit c655fab2523d1c23e903782cf877a05f92788d97[m[33m ([m[1;32mprueba-anim[m[33m)[m
+Merge: 2b331b2 77753d8
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Mon Feb 10 23:34:17 2025 -0300
+
+    Merge pull request #11 from lucassingh/project-detail
+    
+    fix ui
+
+[33mcommit 77753d896779371c77142a97abdf39240efebcc3[m[33m ([m[1;31morigin/project-detail[m[33m, [m[1;32mproject-detail[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Mon Feb 10 23:33:03 2025 -0300
+
+    fix ui
+
+[33mcommit 2b331b234ded13ddd910f7a4bcc75a1da7ddc631[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Mon Feb 10 13:42:19 2025 -0300
+
+    add loader to detail page
+
+[33mcommit 16639027a2597792e317c0e38948e7141a29613a[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Mon Feb 10 13:10:40 2025 -0300
+
+    remove mock data
+
+[33mcommit 469a6e013568de5990663c3de176e55895b9fa04[m[33m ([m[1;32mproject-page[m[33m)[m
+Merge: 5086f4c 5de1670
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Mon Feb 10 13:06:10 2025 -0300
+
+    Merge pull request #10 from lucassingh/project-page
+    
+    dinamic routes
+
+[33mcommit 5de1670fce259ecb9fd2c1c2d6471e3bdf31bae3[m[33m ([m[1;31morigin/project-page[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Mon Feb 10 13:04:44 2025 -0300
+
+    dinamic routes
+
+[33mcommit 5086f4c84eaf40582404d90fced69e926541d750[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Feb 9 23:59:20 2025 -0300
+
+    cambios
+
+[33mcommit 5bd27181714dc8c932955ba16580439cd60c58cb[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Feb 9 20:26:29 2025 -0300
+
+    add link
+
+[33mcommit dc3c258cb4332d8fcc5d126f63cfdc111eebbff7[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Feb 9 00:15:54 2025 -0300
+
+    polish animations
+
+[33mcommit 18e828669886507d897976a8b854c5f121a156d1[m
+Merge: 57b1954 8f2db10
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sat Feb 8 12:56:14 2025 -0300
+
+    Merge pull request #9 from lucassingh/cursor-test
+    
+    cambios
+
+[33mcommit 8f2db10591b33e7edc1e5faada1591d10e46922c[m[33m ([m[1;31morigin/cursor-test[m[33m, [m[1;32mcursor-test[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sat Feb 8 12:55:20 2025 -0300
+
+    cambios
+
+[33mcommit 57b19540cdcda90fe5bdd397c339ecc9ba895e25[m
+Merge: 2b1c069 4bc941c
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sat Feb 8 00:46:10 2025 -0300
+
+    Merge pull request #8 from lucassingh/prueba-cursor
+    
+    cambios animaciones
+
+[33mcommit 4bc941c745238c89f643c32881db74a6e23bfc40[m[33m ([m[1;31morigin/prueba-cursor[m[33m, [m[1;32mprueba-cursor[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sat Feb 8 00:45:21 2025 -0300
+
+    cambios animaciones
+
+[33mcommit 2b1c069210db0ff620d068e3aeb41b82c78516a8[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Fri Feb 7 21:41:03 2025 -0300
+
+    cambios home
+
+[33mcommit 0a3810efd5b6f67e80fad263d200d3cf08aa2e16[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Thu Feb 6 17:52:37 2025 -0300
+
+    add cursor custom
+
+[33mcommit 884f5ad5dd666a3ea9c447322f245d764dcd668f[m[33m ([m[1;32mcursor[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Thu Feb 6 16:35:48 2025 -0300
+
+    add slider text
+
+[33mcommit ea1b54120d73fbe46d80581d2943faa3a71bb21b[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Thu Feb 6 13:58:31 2025 -0300
+
+    fix projects section
+
+[33mcommit 411d126556ffc5f4915f0ec1124464ad38c46c65[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Thu Feb 6 11:58:51 2025 -0300
+
+    cambios footer
+
+[33mcommit 45431a43d95ccb5ad3562cc83120b621b60da054[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Wed Feb 5 20:12:53 2025 -0300
+
+    add footer
+
+[33mcommit ce271a5d5d62c9d0814105d4b6bb0a526452b62d[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Wed Feb 5 15:53:39 2025 -0300
+
+    finish about section
+
+[33mcommit 1998ea9c95b7e5c9fd8219ad8693dd78b2ecf169[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Tue Feb 4 22:32:17 2025 -0300
+
+    about section
+
+[33mcommit e54560abd69c5c3a4f3ddc24757040b68506b296[m
+Merge: ce68566 151d603
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sun Jan 19 20:37:29 2025 -0300
+
+    Merge pull request #6 from lucassingh/parallax-section
+    
+    changes parx
+
+[33mcommit 151d603a55a418f0b9b60abff7732a9df89422a2[m[33m ([m[1;31morigin/parallax-section[m[33m, [m[1;32mparallax-section[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Jan 19 20:35:38 2025 -0300
+
+    changes parx
+
+[33mcommit ce685667c409d18f7a4b6645289feb7553af00a4[m
+Merge: cf003f6 ddb2b30
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sun Jan 19 11:52:34 2025 -0300
+
+    Merge pull request #5 from lucassingh/erase
+    
+    cambios
+
+[33mcommit ddb2b30d09a39c4113683a8330c1b49a73bd8dc8[m[33m ([m[1;31morigin/erase[m[33m, [m[1;32merase[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Jan 19 11:51:16 2025 -0300
+
+    cambios
+
+[33mcommit cf003f67753be87798e2f8ab826ba24f709ab587[m[33m ([m[1;32mparallax[m[33m)[m
+Merge: 58813a2 cc30396
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sun Jan 19 10:03:06 2025 -0300
+
+    Merge pull request #4 from lucassingh/reveal-section
+    
+    last version
+
+[33mcommit cc30396e42a1e8c1b8b0c3b1c627ad4ed8ba71c8[m[33m ([m[1;31morigin/reveal-section[m[33m, [m[1;32mreveal-section[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Jan 19 10:02:05 2025 -0300
+
+    last version
+
+[33mcommit 58813a228a10824910eb5b8799da3b825cc475bd[m
+Merge: 16c2782 e056a5c
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sun Jan 12 17:28:27 2025 -0300
+
+    Merge pull request #3 from lucassingh/text-feature
+    
+    cambios
+
+[33mcommit e056a5c4db370f3cb4df734c6d9d931f96bf7115[m[33m ([m[1;31morigin/text-feature[m[33m, [m[1;32mtext-feature[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sun Jan 12 17:27:19 2025 -0300
+
+    cambios
+
+[33mcommit 16c278245310f89f193796ac82383aa11bb42bcf[m
+Merge: fd4a5e0 1968eda
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Sat Jan 11 17:38:24 2025 -0300
+
+    Merge pull request #2 from lucassingh/section-feature
+    
+    fix sections
+
+[33mcommit 1968eda847c7def8d6d702cb2249ae0d11d79039[m[33m ([m[1;31morigin/section-feature[m[33m, [m[1;32msection-feature[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Sat Jan 11 17:37:29 2025 -0300
+
+    fix sections
+
+[33mcommit fd4a5e0e21b3283531b486914bb84c6b37ad5ee0[m
+Merge: 5499681 d8cbb04
+Author: lucassingh <lucas.singh10@gmail.com>
+Date:   Thu Jan 9 12:24:22 2025 -0300
+
+    Merge pull request #1 from lucassingh/page-trans
+    
+    add animation screen
+
+[33mcommit d8cbb04a09dee02f232416a85d1b3d74c6683bc4[m[33m ([m[1;31morigin/page-trans[m[33m, [m[1;32mpage-trans[m[33m)[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Thu Jan 9 12:21:51 2025 -0300
+
+    add animation screen
+
+[33mcommit 54996810f0efb3dda047da48a0b3516e8250f7e4[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Thu Jan 9 11:12:48 2025 -0300
+
+    first commit
+
+[33mcommit cec7ab805bf2bc7d29481165854e8b9db8a02eef[m
+Author: lucas.singh@bizitglobal.com <lucas.sing@bizitglobal.com>
+Date:   Wed Jan 8 19:51:06 2025 -0300
+
+    Initial commit from Create Next App

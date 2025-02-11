@@ -9,7 +9,7 @@ export const CardProjectID = ({ i, title, subtitle, text1, bgColor }) => {
     const container = useRef();
 
     return (
-        <motion.div ref={container} className={styles.card} style={{ top: `calc(0% + ${i * 9}rem)` }} >
+        <motion.div ref={container} className={styles.card} style={{ top: `calc(0% + ${i * 8}rem)` }} >
             <div className={styles.cardInner} style={{ backgroundColor: bgColor }}>
                 <div className={styles.cardContent}>
                     <h2 className={styles.title}>{title}</h2>

@@ -1,0 +1,46 @@
+.sidebar {
+    position: relative;
+    top: 20px;
+    width: 500px;
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+
+    @media (max-width: 768px) {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+}
+
+.button {
+    background: none;
+    color: #c3c3c3;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.button.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+}
