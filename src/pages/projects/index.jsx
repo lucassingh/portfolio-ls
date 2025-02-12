@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./style.module.scss";
 import Project from "@/components/gallery/project";
 import Modal from "@/components/gallery/modal";
@@ -27,11 +28,18 @@ const Projects = ({ projects }) => {
 				<Sidebar setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
 			</div>
 			<div className={styles.main}>
-				<div className={styles.body}>
+				<motion.div 
+					key={selectedCategory}
+					className={styles.body}
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: -10 }}
+					transition={{ duration: 0.5, ease: "easeInOut" }}				
+				>
 					{filteredProjects.map((project, index) => (
 						<Project onClick={() => handleNavigate(index)} index={index} title={project.title} setModal={setModal} key={index} />
 					))}
-				</div>
+				</motion.div>
 				<Modal modal={modal} projects={filteredProjects} />
 			</div>
 		</Layout>
