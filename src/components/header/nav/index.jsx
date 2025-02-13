@@ -12,6 +12,7 @@ export const index = () => {
                     links.map((link, i) => {
                         return (
                             <div key={`b_${i}`} className={styles.linkContainer}>
+                                <a href={link.href}>
                                 <motion.p
                                     className='link-nav'
                                     custom={i}
@@ -20,10 +21,10 @@ export const index = () => {
                                     animate="enter"
                                     exit="exit"
                                 >
-                                    <a href={link.href}>
+                                    
                                         {link.title}
-                                    </a>
                                 </motion.p>
+                                    </a>
                             </div>
                         )
                     })

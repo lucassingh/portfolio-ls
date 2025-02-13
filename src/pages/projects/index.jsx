@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "./style.module.scss";
 import Project from "@/components/gallery/project";
 import Modal from "@/components/gallery/modal";

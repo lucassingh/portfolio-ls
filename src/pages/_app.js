@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
 	const router = useRouter();
 
 	return (
-		<AnimatePresence mode='await'>
+		<AnimatePresence mode='popLayout'>
 			<NavBar key="navbar" />
 			<CustomCursor key="custom-cursor" />
 			<Component {...pageProps} key={router.asPath} />
