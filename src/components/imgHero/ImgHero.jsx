@@ -4,8 +4,17 @@ import gsap from "gsap";
 import { useRef } from "react";
 import Button from "../button/Button";
 import { motion } from 'framer-motion';
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 const FloatingImage = ({ title, imgSrc, onClick }) => {
+
+    const router = useRouter();
+
+    const handleGoBack = () => {
+        router.back();
+    };
+
     const frameRef = useRef(null);
 
     const handleMouseMove = (e) => {
@@ -60,6 +69,9 @@ const FloatingImage = ({ title, imgSrc, onClick }) => {
                             damping: 25,
                         }}
                     >
+                        <div onClick={handleGoBack} className="cursor-pointer z-60 w-14">
+                            <Image onClick={handleGoBack} className="cursor-pointer mr-4 ml-2" src='/assets/icons/back.png' width={40} height={30} alt='back' />
+                        </div>
                         {title}
                     </motion.h1>
 

@@ -50,7 +50,7 @@ const Projects = ({ projects }) => {
 export async function getStaticProps() {
 	return {
 		props: {
-			projects, // Pasa el JSON estático como prop
+			projects,
 		},
 	};
 }

@@ -12,7 +12,9 @@ export const CardProjectID = ({ i, title, subtitle, text1, bgColor }) => {
         <motion.div ref={container} className={styles.card} style={{ top: `calc(0% + ${i * 8}rem)` }} >
             <div className={styles.cardInner} style={{ backgroundColor: bgColor }}>
                 <div className={styles.cardContent}>
-                    <h2 className={styles.title}>{title}</h2>
+                    <h2 className={styles.title}>
+                        {title}
+                    </h2>
                     <div className={styles.content}>
                         <div className={styles.col1}>
                             <span className={styles.subtitle}>{subtitle}</span><br /><br />
