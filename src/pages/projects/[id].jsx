@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { ReactLenis } from '@studio-freight/react-lenis';
 import { CardProjectID } from '@/components/projectSlider/CardProjectID';
 import FloatingImage from '@/components/imgHero/ImgHero';
+import { projects } from '../api/projects';
 
 const ProjectDetail = ({ project }) => {
     const [loading, setLoading] = useState(true);
@@ -54,21 +55,26 @@ const ProjectDetail = ({ project }) => {
     );
 };
 
-export async function getStaticPaths() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
-    const projects = await res.json();
 
+export async function getStaticPaths() {
     const paths = projects.map((project) => ({
-        params: { id: project.id.toString() },
+        params: { id: project.id },
     }));
 
-    return { paths, fallback: false };
+    return {
+        paths,
+        fallback: false,
+    };
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
-    const projects = await res.json();
-    const project = projects.find((p) => p.id.toString() === params.id);
+    const project = projects.find((p) => p.id === params.id);
+
+    if (!project) {
+        return {
+            notFound: true,
+        };
+    }
 
     return {
         props: { project },

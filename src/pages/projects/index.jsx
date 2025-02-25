@@ -6,6 +6,7 @@ import Modal from "@/components/gallery/modal";
 import Layout from "@/components/layout";
 import { useRouter } from "next/router";
 import { Sidebar } from "@/components/sidebar/ProjectNav";
+import { projects } from "../api/projects";
 
 const Projects = ({ projects }) => {
 	const [modal, setModal] = useState({ active: false, index: 0 });
@@ -28,13 +29,13 @@ const Projects = ({ projects }) => {
 				<Sidebar setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
 			</div>
 			<div className={styles.main}>
-				<motion.div 
+				<motion.div
 					key={selectedCategory}
 					className={styles.body}
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: -10 }}
-					transition={{ duration: 0.5, ease: "easeInOut" }}				
+					transition={{ duration: 0.5, ease: "easeInOut" }}
 				>
 					{filteredProjects.map((project, index) => (
 						<Project onClick={() => handleNavigate(index)} index={index} title={project.title} setModal={setModal} key={index} />
@@ -47,12 +48,9 @@ const Projects = ({ projects }) => {
 };
 
 export async function getStaticProps() {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
-	const projects = await res.json();
-
 	return {
 		props: {
-			projects,
+			projects, // Pasa el JSON estático como prop
 		},
 	};
 }

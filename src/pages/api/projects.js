@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
     {
         id: "bizit-global",
         title: "Bizit Global",
