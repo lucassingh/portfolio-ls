@@ -8,7 +8,7 @@ export const Description = () => {
         console.log('entro')
         event.preventDefault();
         window.open(
-            'https://drive.google.com/file/d/1YhVFv0y4H6IaCHuQO7uTwqUBUIFifw9u/view?usp=sharing',
+            'https://drive.google.com/file/d/1FRIXpYuzGNwvyaEU0DXo_cvTtB2RqD3e/view?usp=sharing',
             '_blank',
             'noopener,noreferrer'
         );

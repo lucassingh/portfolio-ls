@@ -39,6 +39,45 @@ export const projects = [
         ]
     },
     {
+        id: "bizit-bgenai",
+        title: "BGenAI",
+        src: "img-11.png",
+        srcMobile: 'img-11.png',
+        color: "#000000",
+        link: "https://bgenai.bizitglobal.com/",
+        category: 'React',
+        cards: [
+            {
+                id: 1,
+                title: 'About Project',
+                subtitle: 'AI-powered solutions for business transformation',
+                text1: 'BGenAI is an innovative platform offering cutting-edge AI solutions to optimize business processes, enhance decision-making, and drive digital transformation across industries.',
+                bgColor: '#dddddd'
+            },
+            {
+                id: 2,
+                title: 'Technologies Used',
+                subtitle: 'Modern tech stack for AI solutions',
+                text1: 'The platform combines React.js for the frontend with powerful AI frameworks and cloud technologies, delivering scalable and intelligent business solutions.',
+                bgColor: '#bfbcbc'
+            },
+            {
+                id: 3,
+                title: 'Challenge and Solutions',
+                subtitle: 'Bridging the gap between AI and business needs',
+                text1: 'Developed customizable AI solutions that address specific industry challenges while maintaining explainability and seamless integration with existing systems.',
+                bgColor: '#9f9c9c'
+            },
+            {
+                id: 4,
+                title: 'Key Features',
+                subtitle: 'Comprehensive AI-powered platform',
+                text1: 'Offers predictive analytics, natural language processing, computer vision, and process automation capabilities with real-time insights and user-friendly interfaces.',
+                bgColor: '#7c7a7a'
+            },
+        ]
+    },
+    {
         id: "sembrando-valores",
         title: "Sembrando Valores",
         src: "img-2.png",
